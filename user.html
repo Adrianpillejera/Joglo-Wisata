@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joglo Wisata</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <a class="navbar-brand mx-4" style="color: rgb(255, 255, 255);" href="#beranda">
+            <img src="assets/logo.png" width="45px">
+            Joglo Wisata
+        </a>
+        <div class="text-white" style="justify-content: center;">
+            <h4 id="welcome"></h4>
+        </div>
+        <button class="navbar-toggler mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto mx-4">
+                <a class="nav-link text-white text-center" href="user.html"><b>Dashboard</b></a>
+                <a class="nav-link text-white text-center" href="riwayat.html"><b>Riwayat Perjalanan</b></a>
+                <a class="nav-link text-white text-center" style="background-color: #FF6200; border-radius: 12px;" href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <section id="paket" style="background-color: rgb(231, 106, 4);">
+        <div class="container py-1">
+            <div class="row mb-4">
+                <div class="col-md-6 mt-4">
+                    <div class="card">
+                        <img class="gambar-paket card-img" src="assets/Paket-Wisata-Bali.jpg" alt="paket bali">
+                        <div class="card-body" style="background-color: rgb(197, 90, 2);">
+                            <h5 class="card-title text-white mb-4">
+                                Paket Wisata Bali <br>
+                                3 Hari 2 Malam <br>
+                                Harga Rp. 7000000 <br>
+                            </h5>
+                            <button class="btn" onclick="pesan('Paket Wisata Bali','7000000','3 Hari 2 Malam')" style="background-color: rgb(238, 138, 7);"><h5 class="text-white">Pesan</h5></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card">
+                        <img class="gambar-paket card-img" src="assets/Paket-Wisata-Bandung.jpg" alt="paket bandung">
+                        <div class="card-body" style="background-color: rgb(197, 90, 2);">
+                            <h5 class="card-title text-white mb-4">
+                                Paket Wisata Bandung + Lembang <br>
+                                3 Hari 2 Malam <br>
+                                Harga Rp. 3000000 <br>
+                            </h5>
+                            <button class="btn" onclick="pesan('Paket Wisata Bandung + Lembang','3000000','3 Hari 2 Malam')" style="background-color: rgb(238, 138, 7);"><h5 class="text-white">Pesan</h5></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img class="gambar-paket card-img" src="assets/Paket-Wisata-Bromo.jpg" alt="paket bromo">
+                        <div class="card-body" style="background-color: rgb(197, 90, 2);">
+                            <h5 class="card-title text-white mb-4">
+                                Paket Wisata Bromo Malang <br>
+                                2 Hari 1 Malam <br>
+                                Harga Rp. 5000000 <br>
+                            </h5>
+                            <button class="btn" onclick="pesan('Paket Wisata Bromo Malang','5000000','2 Hari 1 Malam')" style="background-color: rgb(238, 138, 7);"><h5 class="text-white">Pesan</h5></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img class="gambar-paket card-img" src="assets/Paket-Wisata-Jogja.jpg" alt="paket jogja">
+                        <div class="card-body" style="background-color: rgb(197, 90, 2);">
+                            <h5 class="card-title text-white mb-4">
+                                Paket Wisata Jogja Keluarga <br>
+                                2 Hari 2 Malam <br>
+                                Harga Rp. 6000000 <br>
+                            </h5>
+                            <button class="btn" onclick="pesan('Paket Wisata Jogja Keluarga','6000000','2 Hari 2 Malam')" style="background-color: rgb(238, 138, 7);"><h5 class="text-white">Pesan</h5></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-white py-4" style="background-image: url(assets/orange-background.webp);">
+        <div class="container text-center">
+            <p class="mb-1">&copy; Joglo Wisata - 2026</p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/user.js"></script>
+    <script>
+        let user = JSON.parse(localStorage.getItem("userLogin"))
+
+        document.getElementById("welcome").innerHTML =
+        "Welcome, " + user.username
+
+        document.getElementById("nama").innerHTML = user.username
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joglo Wisata</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <a class="navbar-brand mx-4" style="color: rgb(255, 255, 255);" href="#beranda">
+            <img src="assets/logo.png" width="45px">
+            Joglo Wisata
+        </a>
+        <div class="text-white" style="justify-content: center;">
+            <h4 id="welcome"></h4>
+        </div>
+        <button class="navbar-toggler mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto mx-4">
+                <a class="nav-link text-white text-center" href="user.html"><b>Dashboard</b></a>
+                <a class="nav-link text-white text-center" href="riwayat.html"><b>Riwayat Perjalanan</b></a>
+                <a class="nav-link text-white text-center" style="background-color: #FF6200; border-radius: 12px;" href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <section class="fullscreen" style="background-color: #EE7E0E">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-white text-center my-5">Riwayat Perjalanan</h1>
+                <table class="table text-white text-center">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Paket</th>
+                            <th>Biaya</th>
+                            <th>Durasi</th>
+                            <th>Jumlah Orang</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider" id="list"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer class="text-white py-4" style="background-image: url(assets/orange-background.webp);">
+        <div class="container text-center">
+            <p class="mb-1">&copy; Joglo Wisata - 2026</p>
+        </div>
+    </footer>
+    <script src="js/logout.js"></script>
+    <script src="js/riwayat.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        let user = JSON.parse(localStorage.getItem("userLogin"))
+
+        document.getElementById("welcome").innerHTML =
+        "Welcome, " + user.username
+
+        document.getElementById("nama").innerHTML = user.username
+    </script>
+</body>
+</html>

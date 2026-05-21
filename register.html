@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joglo Wisata</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <a class="navbar-brand mx-4" style="color: rgb(255, 255, 255);" href="#beranda">
+            <img src="assets/logo.png" width="45px">
+            Joglo Wisata
+        </a>
+        <button class="navbar-toggler mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto mx-4">
+                <a class="nav-link text-white text-center" href="index.html#beranda"><b>Beranda</b></a>
+                <a class="nav-link text-white text-center" href="index.html#paket"><b>Daftar Paket Wisata</b></a>
+                <a class="nav-link text-white text-center" href="index.html#tentang"><b>Tentang Kami</b></a>
+                <a class="nav-link text-white text-center" href="index.html#kontak"><b>Kontak</b></a>
+            </div>
+        </div>
+    </nav>
+    <section class="fullscreen d-flex align-items-center" style="background-color: #EE7E0E;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center my-5">
+                <div class="col-md-4">
+                    <div class="login-card p-4 shadow" style="background-image: url(assets/orange-background.webp);">
+                        <h2 class="text-center text-white mb-3">Register</h2>
+                        <form id="formLogin" onsubmit="register(event)">
+                            <div class="mb-3">
+                                <input type="text" id="username" placeholder="Username" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="email" placeholder="Email" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" id="password" placeholder="Password" class="form-control">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn text-white" style="background-color: #A14300; border-radius: 12px;">Register</button>
+                            </div>
+                            <p class="text-center text-white mt-3">Sudah punya akun? <a href="login.html">Login disini!</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-white py-4" style="background-image: url(assets/orange-background.webp);">
+        <div class="container text-center">
+            <p class="mb-1">&copy; Joglo Wisata - 2026</p>
+        </div>
+    </footer>
+    <script src="js/register.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
