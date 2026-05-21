@@ -1,10 +1,22 @@
+init()
+
+function init(){
+
+let user = JSON.parse(localStorage.getItem("userLogin"))
+
+if(!user){
+    alert("Harap login terlebih dahulu.")
+    window.location.href="login.html"
+    return
+}}
+
 function pesan(paket, biaya, durasi){
 
 let user = JSON.parse(localStorage.getItem("userLogin"))
 
 if(!user){
     alert("Harap login terlebih dahulu.")
-    window.location.href="../index.html"
+    window.location.href="login.html"
     return
 }
 
